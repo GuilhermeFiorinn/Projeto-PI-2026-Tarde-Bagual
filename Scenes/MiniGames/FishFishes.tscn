@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://c6x06cfwfgrlg"]
+
+[ext_resource type="Texture2D" uid="uid://cjiqvdsr18ygt" path="res://Sprites/EmConstucao.png" id="1_qbcl0"]
+
+[node name="FishFishes" type="Node2D" unique_id=75187565]
+
+[node name="EmConstucao" type="Sprite2D" parent="." unique_id=473594531]
+position = Vector2(640.74994, 361.06253)
+scale = Vector2(0.46602476, 0.53224325)
+texture = ExtResource("1_qbcl0")

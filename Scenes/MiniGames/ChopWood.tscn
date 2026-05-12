@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://brx7rj1kf7fl5"]
+
+[ext_resource type="Texture2D" uid="uid://cjiqvdsr18ygt" path="res://Sprites/EmConstucao.png" id="1_lxmqb"]
+
+[node name="ChopWood" type="Node2D" unique_id=590010203]
+
+[node name="EmConstucao" type="Sprite2D" parent="." unique_id=1513440857]
+position = Vector2(640.74994, 361.06253)
+scale = Vector2(0.46602476, 0.53224325)
+texture = ExtResource("1_lxmqb")

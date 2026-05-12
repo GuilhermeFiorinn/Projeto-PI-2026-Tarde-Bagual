@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bqpiohik24kc8"]
+
+[ext_resource type="Texture2D" uid="uid://cjiqvdsr18ygt" path="res://Sprites/EmConstucao.png" id="1_ial7j"]
+
+[node name="BuildTent" type="Node2D" unique_id=1972162336]
+
+[node name="EmConstucao" type="Sprite2D" parent="." unique_id=1926490342]
+position = Vector2(640.74994, 361.06253)
+scale = Vector2(0.46602476, 0.53224325)
+texture = ExtResource("1_ial7j")

@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://biu07wgcgovwa"]
+
+[ext_resource type="Script" uid="uid://c74y3rb45ww7" path="res://Scripts/MainMenu.gd" id="1_3kf3n"]
+
+[node name="Menu" type="Node2D" unique_id=425219476]
+script = ExtResource("1_3kf3n")
+
+[node name="ButtonManager" type="Control" parent="." unique_id=1995545027]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 64.0
+offset_top = 90.0
+offset_right = 104.0
+offset_bottom = 130.0
+
+[node name="PlayButton" type="Button" parent="ButtonManager" unique_id=1618811542]
+layout_mode = 0
+offset_left = 405.00003
+offset_top = 143.00005
+offset_right = 545.0
+offset_bottom = 174.00005
+scale = Vector2(2.5, 2.5)
+text = "Play"
+
+[node name="QuitButton" type="Button" parent="ButtonManager" unique_id=634979749]
+layout_mode = 0
+offset_left = 406.0
+offset_top = 282.00003
+offset_right = 546.0
+offset_bottom = 313.00003
+scale = Vector2(2.5, 2.5)
+text = "Quit
+"
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=992834287]
+show_behind_parent = true
+offset_left = -14.0
+offset_top = -10.0
+offset_right = 1293.0
+offset_bottom = 734.0
+mouse_filter = 2
+
+[connection signal="pressed" from="ButtonManager/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="ButtonManager/QuitButton" to="." method="_on_quit_button_pressed"]

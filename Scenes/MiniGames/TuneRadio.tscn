@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://darl8xocw7j16"]
+
+[ext_resource type="Texture2D" uid="uid://cjiqvdsr18ygt" path="res://Sprites/EmConstucao.png" id="1_u1fbh"]
+
+[node name="TuneRadio" type="Node2D" unique_id=1589180665]
+
+[node name="EmConstucao" type="Sprite2D" parent="." unique_id=914587991]
+position = Vector2(640.74994, 361.06253)
+scale = Vector2(0.46602476, 0.53224325)
+texture = ExtResource("1_u1fbh")

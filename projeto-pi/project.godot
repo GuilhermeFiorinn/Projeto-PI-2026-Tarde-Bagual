@@ -1,0 +1,32 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Projeto-PI"
+run/main_scene="uid://biu07wgcgovwa"
+config/features=PackedStringArray("4.6", "Mobile")
+config/icon="res://Sprites/icon.svg"
+
+[autoload]
+
+GameController="*uid://wg28tceqh6uh"
+SceneController="*uid://df1f667q80m2d"
+AudioController="*uid://swb2wm1s073i"
+FadesTransactions="*uid://cb3hx53khcovi"
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
+
+[rendering]
+
+rendering_device/driver.windows="d3d12"
+renderer/rendering_method="mobile"

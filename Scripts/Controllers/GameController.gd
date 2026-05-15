@@ -40,3 +40,12 @@ func _process(delta: float) -> void:
 func complete_task(task):
 	if (task != null):
 		task_list[task]["completed"] = true
+
+func _input(event):
+	if event.is_action_pressed("ui_up"):
+		print_debug("build_tent")
+		task_list["build_tent"]["completed"] = true
+
+	if event.is_action_pressed("ui_down"):
+		print_debug("chop_wood")
+		task_list["chop_wood"]["completed"] = true

@@ -16,23 +16,35 @@ offset_bottom = 130.0
 [node name="PlayButton" type="Button" parent="ButtonManager" unique_id=1618811542]
 layout_mode = 0
 offset_left = 405.00003
-offset_top = 143.00005
+offset_top = 214.00003
 offset_right = 545.0
-offset_bottom = 174.00005
+offset_bottom = 245.00003
 scale = Vector2(2.5, 2.5)
 text = "Play"
 
 [node name="QuitButton" type="Button" parent="ButtonManager" unique_id=634979749]
 layout_mode = 0
 offset_left = 406.0
-offset_top = 282.00003
+offset_top = 397.0
 offset_right = 546.0
-offset_bottom = 313.00003
+offset_bottom = 428.0
 scale = Vector2(2.5, 2.5)
 text = "Quit
 "
 
+[node name="Label" type="Label" parent="." unique_id=260051254]
+top_level = true
+offset_left = 342.0
+offset_top = 65.0
+offset_right = 975.0
+offset_bottom = 202.0
+theme_override_font_sizes/font_size = 100
+text = "Tarde Bagual"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="ColorRect" type="ColorRect" parent="." unique_id=992834287]
+modulate = Color(0.2604962, 0.40578845, 0.18412778, 1)
 show_behind_parent = true
 offset_left = -14.0
 offset_top = -10.0

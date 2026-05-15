@@ -12,7 +12,7 @@ extends Node2D
 
 
 func _on_play_button_pressed() -> void:
-	SceneController.change_scene("res://Scenes/Home.tscn")
+	SceneController.change_scene("res://Scenes/Uis/Home.tscn")
 
 
 func _on_quit_button_pressed() -> void:

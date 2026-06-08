@@ -7,9 +7,9 @@ var paths = GameController.mini_games_path
 @onready var task_panel = $TaskList/TaskPanel
 
 func _ready():
-	$Control/ButtonBuild.tooltip_text = tasks["build_tent"]["title"]
-	$Control/ButtonChop.tooltip_text = tasks["chop_wood"]["title"]
-	$Control/ButtonFish.tooltip_text = tasks["fish"]["title"]
+	$GamesButtons/ButtonBuild.tooltip_text = tasks["build_tent"]["title"]
+	$GamesButtons/ButtonChop.tooltip_text = tasks["chop_wood"]["title"]
+	$GamesButtons/ButtonFish.tooltip_text = tasks["fish"]["title"]
 
 	task_panel.visible = false
 	create_task_list()

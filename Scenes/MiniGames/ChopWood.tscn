@@ -1,10 +1,69 @@
 [gd_scene format=3 uid="uid://brx7rj1kf7fl5"]
 
-[ext_resource type="Texture2D" uid="uid://cjiqvdsr18ygt" path="res://Sprites/EmConstucao.png" id="1_lxmqb"]
+[ext_resource type="Texture2D" uid="uid://bvusoy6t0yr8c" path="res://Sprites/Minigames/ChopWood/background.webp" id="1_1lehc"]
+[ext_resource type="Texture2D" uid="uid://ctdqv1rp4tasm" path="res://Sprites/Minigames/ChopWood/pixil-frame-0(1).png" id="2_g4a16"]
+[ext_resource type="Texture2D" uid="uid://bkd62su0mhgrh" path="res://Sprites/Minigames/ChopWood/wood.png" id="2_kfo36"]
+[ext_resource type="PackedScene" uid="uid://cuvcdn6705m0p" path="res://Scenes/MiniGames/ChopWood/Axe.tscn" id="3_f07gh"]
+[ext_resource type="Texture2D" uid="uid://dnhvisvow4tkp" path="res://Sprites/Minigames/ChopWood/wood_broken.png" id="3_g4a16"]
+[ext_resource type="Texture2D" uid="uid://bjl2r85gupti2" path="res://Sprites/Minigames/ChopWood/pixilart-drawing(2).png" id="4_ou4bp"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cphh5"]
+animations = [{
+"frames": [{
+"duration": 0.5,
+"texture": ExtResource("2_g4a16")
+}, {
+"duration": 2.0,
+"texture": ExtResource("3_g4a16")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ou4bp")
+}],
+"loop": false,
+"name": &"choping",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_kfo36")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cmcnd"]
+size = Vector2(97.857414, 35.5)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ou4bp"]
 
 [node name="ChopWood" type="Node2D" unique_id=590010203]
 
-[node name="EmConstucao" type="Sprite2D" parent="." unique_id=1513440857]
-position = Vector2(640.74994, 361.06253)
-scale = Vector2(0.46602476, 0.53224325)
-texture = ExtResource("1_lxmqb")
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=342407149]
+position = Vector2(639.99994, 360)
+scale = Vector2(1.5999999, 1.5720522)
+texture = ExtResource("1_1lehc")
+
+[node name="Wood" type="CharacterBody2D" parent="." unique_id=1654308723]
+position = Vector2(629, 463.00003)
+scale = Vector2(2, 2)
+
+[node name="Animation" type="AnimatedSprite2D" parent="Wood" unique_id=539805386]
+texture_filter = 1
+scale = Vector2(8, 8)
+sprite_frames = SubResource("SpriteFrames_cphh5")
+animation = &"choping"
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wood" unique_id=693913118]
+position = Vector2(0, 3.5)
+scale = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_cmcnd")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Wood" unique_id=1513119632]
+sprite_frames = SubResource("SpriteFrames_ou4bp")
+
+[node name="Axe" parent="." unique_id=1458561899 instance=ExtResource("3_f07gh")]
+position = Vector2(100, 100)
+
+[connection signal="animation_finished" from="Wood/Animation" to="Axe" method="_on_madera_animation_finished"]

@@ -1,10 +1,60 @@
 [gd_scene format=3 uid="uid://darl8xocw7j16"]
 
-[ext_resource type="Texture2D" uid="uid://cjiqvdsr18ygt" path="res://Sprites/EmConstucao.png" id="1_u1fbh"]
+[ext_resource type="Texture2D" uid="uid://diyr7ihq8oo2n" path="res://Sprites/icon.svg" id="1_u1fbh"]
 
 [node name="TuneRadio" type="Node2D" unique_id=1589180665]
 
-[node name="EmConstucao" type="Sprite2D" parent="." unique_id=914587991]
-position = Vector2(640.74994, 361.06253)
-scale = Vector2(0.46602476, 0.53224325)
+[node name="Radio" type="ColorRect" parent="." unique_id=294841040]
+offset_left = 166.0
+offset_top = 170.0
+offset_right = 716.0
+offset_bottom = 509.0
+color = Color(0.23031491, 0.23031494, 0.23031494, 1)
+
+[node name="ColorRect" type="ColorRect" parent="Radio" unique_id=325113218]
+layout_mode = 0
+offset_left = 551.0
+offset_right = 653.0
+offset_bottom = 339.0
+color = Color(0.288518, 0.28851798, 0.28851798, 1)
+
+[node name="Control" type="Control" parent="." unique_id=617052833]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Lines" type="ColorRect" parent="Control" unique_id=512560631]
+layout_mode = 0
+offset_left = 167.0
+offset_top = 217.0
+offset_right = 714.0
+offset_bottom = 229.0
+color = Color(0.8156863, 0, 0, 1)
+
+[node name="Line2" type="ColorRect" parent="Control" unique_id=874228694]
+layout_mode = 0
+offset_left = 167.0
+offset_top = 328.0
+offset_right = 714.0
+offset_bottom = 340.0
+color = Color(0.8156863, 0, 0, 1)
+
+[node name="Line1" type="ColorRect" parent="Control" unique_id=707903622]
+layout_mode = 0
+offset_left = 167.0
+offset_top = 452.0
+offset_right = 714.0
+offset_bottom = 464.0
+color = Color(0.8156863, 0, 0, 1)
+
+[node name="Button" type="Sprite2D" parent="." unique_id=1949798411]
+position = Vector2(763.75, 331.5)
+rotation = -2.1155403
+scale = Vector2(0.58203053, 0.5078124)
 texture = ExtResource("1_u1fbh")
+
+[node name="Fundo" type="ColorRect" parent="." unique_id=1562250476]
+show_behind_parent = true
+offset_right = 1282.0
+offset_bottom = 719.0

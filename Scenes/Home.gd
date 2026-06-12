@@ -11,8 +11,7 @@ func _ready():
 	$GamesButtons/ButtonBuild.tooltip_text = tasks["build_tent"]["title"]
 	$GamesButtons/ButtonChop.tooltip_text = tasks["chop_wood"]["title"]
 	$GamesButtons/ButtonFish.tooltip_text = tasks["fish"]["title"]
-	$GamesButtons/ButtonRadio.tooltip_text = tasks["tune_the_radio"]["title"]
-	
+
 	task_panel.visible = false
 	if description_label:
 		description_label.text = ""

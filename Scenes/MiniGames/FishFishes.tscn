@@ -1,10 +1,60 @@
 [gd_scene format=3 uid="uid://c6x06cfwfgrlg"]
 
-[ext_resource type="Texture2D" uid="uid://cjiqvdsr18ygt" path="res://Sprites/EmConstucao.png" id="1_qbcl0"]
+[ext_resource type="Script" uid="uid://b5gg13iu8s2g0" path="res://Scenes/MiniGames/fish_fishes.gd" id="1_qbcl0"]
+[ext_resource type="Texture2D" uid="uid://6emjdjj1x8kj" path="res://Sprites/Rio2.png" id="2_trque"]
+[ext_resource type="Texture2D" uid="uid://c7c5n4eetil57" path="res://VARAVARA.png" id="3_dvf4h"]
+[ext_resource type="Texture2D" uid="uid://bw0hfto3lj7qu" path="res://Sprites/aNZOL (1).png" id="4_otpj7"]
 
 [node name="FishFishes" type="Node2D" unique_id=75187565]
+script = ExtResource("1_qbcl0")
 
-[node name="EmConstucao" type="Sprite2D" parent="." unique_id=473594531]
-position = Vector2(640.74994, 361.06253)
-scale = Vector2(0.46602476, 0.53224325)
-texture = ExtResource("1_qbcl0")
+[node name="FundoCenario" type="TextureRect" parent="." unique_id=1525460252]
+texture_filter = 1
+offset_left = 7.0
+offset_top = -80.0
+offset_right = 1285.0
+offset_bottom = 1174.0
+texture = ExtResource("2_trque")
+
+[node name="VARAAPENAS" type="Sprite2D" parent="." unique_id=956132011]
+position = Vector2(726.00006, 293)
+rotation = -0.2617994
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("3_dvf4h")
+
+[node name="Sprite1cena" type="Sprite2D" parent="." unique_id=1882886101]
+position = Vector2(661, 333)
+scale = Vector2(0.9999999, 0.9999999)
+texture = ExtResource("4_otpj7")
+
+[node name="Sprite2cena" type="Sprite2D" parent="." unique_id=74657824]
+position = Vector2(764.0001, 548.99994)
+rotation = -0.45727623
+scale = Vector2(1.5000001, 2.2)
+texture = ExtResource("4_otpj7")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=1375380144]
+amount = 15
+explosiveness = 1.0
+direction = Vector2(1, -1)
+color = Color(0.73794556, 0.9120002, 0.99940187, 1)
+
+[node name="StatusLabel" type="Label" parent="." unique_id=1800343198]
+offset_left = 563.0
+offset_top = 14.0
+offset_right = 936.0
+offset_bottom = 112.0
+
+[node name="ActionButton" type="Button" parent="." unique_id=1672660546]
+offset_left = 38.0
+offset_top = 560.0
+offset_right = 325.0
+offset_bottom = 688.0
+
+[node name="FishingTimer" type="Timer" parent="." unique_id=342240417]
+
+[node name="QTE_Timer" type="Timer" parent="." unique_id=1169014037]
+
+[connection signal="pressed" from="ActionButton" to="." method="_on_action_button_pressed"]
+[connection signal="timeout" from="FishingTimer" to="." method="_on_fishing_timer_timeout"]
+[connection signal="timeout" from="QTE_Timer" to="." method="_on_qte_timer_timeout"]

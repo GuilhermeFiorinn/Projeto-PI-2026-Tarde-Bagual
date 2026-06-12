@@ -43,6 +43,13 @@ offset_top = 33.0
 offset_right = 1111.0
 offset_bottom = 169.0
 
+[node name="ButtonRadio" type="Button" parent="GamesButtons" unique_id=1985024680]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 617.0
+offset_right = 125.0
+offset_bottom = 689.0
+
 [node name="TaskList" type="Control" parent="." unique_id=1522179637]
 layout_mode = 3
 anchors_preset = 0
@@ -59,7 +66,6 @@ text = "Lista De
 Afazeres"
 
 [node name="TaskPanel" type="Panel" parent="TaskList" unique_id=18143507]
-visible = false
 layout_mode = 0
 offset_left = -1112.0
 offset_top = 16.0
@@ -77,7 +83,15 @@ theme_override_constants/margin_bottom = 10
 [node name="VBoxContainer" type="VBoxContainer" parent="TaskList/TaskPanel/MarginContainer" unique_id=1656272879]
 layout_mode = 2
 
+[node name="DescriptionLabel" type="RichTextLabel" parent="TaskList/TaskPanel" unique_id=1580679585]
+layout_mode = 0
+offset_left = 576.0
+offset_top = 3.0
+offset_right = 1094.0
+offset_bottom = 642.0
+
 [connection signal="pressed" from="GamesButtons/ButtonBuild" to="." method="_on_button_build_pressed"]
 [connection signal="pressed" from="GamesButtons/ButtonChop" to="." method="_on_button_chop_pressed"]
 [connection signal="pressed" from="GamesButtons/ButtonFish" to="." method="_on_button_fish_pressed"]
+[connection signal="pressed" from="GamesButtons/ButtonRadio" to="." method="_on_button_radio_pressed"]
 [connection signal="pressed" from="TaskList/ListButton" to="." method="_on_list_button_pressed"]

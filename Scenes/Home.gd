@@ -78,6 +78,3 @@ func _on_button_chop_pressed() -> void:
 
 func _on_button_fish_pressed() -> void:
 	SceneController.change_scene(paths["fish"])
-
-func _on_button_radio_pressed() -> void:
-	SceneController.change_scene(paths["tune_the_radio"])

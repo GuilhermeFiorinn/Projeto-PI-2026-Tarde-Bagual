@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cuvcdn6705m0p"]
+
+[ext_resource type="Script" uid="uid://dx3cttqm4kl4l" path="res://Scenes/MiniGames/ChopWood/axe.gd" id="1_jkne7"]
+[ext_resource type="Texture2D" uid="uid://1tue3xrg7oo6" path="res://Sprites/Minigames/ChopWood/axe.png" id="2_5hxm4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ou4bp"]
+size = Vector2(3, 17)
+
+[node name="Axe" type="CharacterBody2D" unique_id=1458561899]
+scale = Vector2(8, 10)
+script = ExtResource("1_jkne7")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=433951687]
+texture_filter = 1
+position = Vector2(0.5, 0)
+texture = ExtResource("2_5hxm4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=119162449]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_ou4bp")

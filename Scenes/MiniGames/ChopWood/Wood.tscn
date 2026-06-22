@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://gqtp01b5aihi"]
+
+[ext_resource type="Texture2D" uid="uid://bkd62su0mhgrh" path="res://Sprites/Minigames/ChopWood/wood.png" id="1_5do5m"]
+[ext_resource type="Texture2D" uid="uid://dnhvisvow4tkp" path="res://Sprites/Minigames/ChopWood/wood_broken.png" id="2_b4p33"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cphh5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_5do5m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_b4p33")
+}],
+"loop": false,
+"name": &"choping",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_5do5m")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cmcnd"]
+size = Vector2(97.857414, 35.5)
+
+[node name="Wood" type="CharacterBody2D" unique_id=1141296522]
+scale = Vector2(2, 2)
+
+[node name="Madera" type="AnimatedSprite2D" parent="." unique_id=1885119081]
+texture_filter = 1
+scale = Vector2(8, 8)
+sprite_frames = SubResource("SpriteFrames_cphh5")
+animation = &"choping"
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1753796731]
+position = Vector2(0, 3.5)
+scale = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_cmcnd")

@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://dd7cic5xne8ol"]
+
+[ext_resource type="Texture2D" uid="uid://cue2prevs51ua" path="res://Sprites/Enviroment/noite floresta.png" id="1_aa8yl"]
+[ext_resource type="Script" uid="uid://bv3bo4uty4041" path="res://Scenes/MiniGames/catch_fireflies.gd" id="1_ct6sw"]
+[ext_resource type="PackedScene" uid="uid://n3sl00r32gbc" path="res://Scenes/Uis/ScoreUI.tscn" id="3_ct6sw"]
+
+[node name="CatchFireflies" type="Node2D" unique_id=301861805]
+script = ExtResource("1_ct6sw")
+meta_acertos = 6
+limite_erros = 4
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=549926151]
+texture_filter = 1
+offset_right = 1283.0
+offset_bottom = 723.0
+texture = ExtResource("1_aa8yl")
+
+[node name="TimerSpawn" type="Timer" parent="." unique_id=1285187942]
+
+[node name="MarcadoresSpawn" type="Node2D" parent="." unique_id=1735607856]
+
+[node name="Pos1" type="Marker2D" parent="MarcadoresSpawn" unique_id=741116076]
+position = Vector2(222, 581)
+
+[node name="Pos2" type="Marker2D" parent="MarcadoresSpawn" unique_id=1820948750]
+position = Vector2(486, 213)
+
+[node name="Pos3" type="Marker2D" parent="MarcadoresSpawn" unique_id=1249508485]
+position = Vector2(841, 557)
+
+[node name="Pos4" type="Marker2D" parent="MarcadoresSpawn" unique_id=1986460314]
+position = Vector2(863, 243)
+
+[node name="ScoreUI" parent="." unique_id=1148181781 instance=ExtResource("3_ct6sw")]

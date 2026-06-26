@@ -1,16 +1,23 @@
 [gd_scene format=3 uid="uid://7kb61jm2kwex"]
 
-[ext_resource type="Script" uid="uid://bltxiyl7qk04g" path="res://Scenes/Home.gd" id="1_bf2t8"]
-[ext_resource type="Texture2D" uid="uid://b4c4e7kt5mcyd" path="res://Sprites/Enviroment/pixil-frame-0.png" id="2_sd5y8"]
+[ext_resource type="Script" uid="uid://bltxiyl7qk04g" path="res://Scripts/Home.gd" id="1_bf2t8"]
+[ext_resource type="Texture2D" uid="uid://c26m7eu3l5p7a" path="res://Sprites/Enviroment/mapa.png" id="2_bf2t8"]
+[ext_resource type="Texture2D" uid="uid://deg2pkrqkwb1g" path="res://Sprites/Icones/barraca.png" id="3_bayy0"]
+[ext_resource type="Texture2D" uid="uid://cn4ghkgrh0j37" path="res://Sprites/Icones/Placa.png" id="4_40hqr"]
+[ext_resource type="Texture2D" uid="uid://bnrko25ka8i1" path="res://Sprites/Icones/icon cortar lenha.png" id="4_vc17c"]
+[ext_resource type="Texture2D" uid="uid://dhbg651t5d8ix" path="res://Sprites/Icones/icone pesca.png" id="5_40hqr"]
+[ext_resource type="Texture2D" uid="uid://bs7mtkbjdx3cc" path="res://Sprites/Icones/IconeVagalume.png" id="7_vc17c"]
+[ext_resource type="Texture2D" uid="uid://bq5rjg1vgrd31" path="res://Sprites/Enviroment/Caderno.png" id="8_40hqr"]
 
 [node name="HomeView" type="Node2D" unique_id=1859728771]
 script = ExtResource("1_bf2t8")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=2114399040]
 show_behind_parent = true
-position = Vector2(641, 360)
-scale = Vector2(1.2480469, 0.70117193)
-texture = ExtResource("2_sd5y8")
+texture_filter = 1
+position = Vector2(640.5, 360.49997)
+scale = Vector2(10.296, 7.631579)
+texture = ExtResource("2_bf2t8")
 
 [node name="GamesButtons" type="Control" parent="." unique_id=207267753]
 top_level = true
@@ -20,35 +27,92 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="ButtonBuild" type="Button" parent="GamesButtons" unique_id=1268081863]
-modulate = Color(1, 1, 1, 0)
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_left = 836.0
-offset_top = 324.0
-offset_right = 1076.0
-offset_bottom = 507.0
+offset_left = 991.0
+offset_top = 336.0
+offset_right = 1115.0
+offset_bottom = 437.0
+
+[node name="Sprite2D" type="Sprite2D" parent="GamesButtons/ButtonBuild" unique_id=1838174370]
+texture_filter = 1
+position = Vector2(63.000015, 50)
+scale = Vector2(2, 1.948)
+texture = ExtResource("3_bayy0")
+
+[node name="Sprite2D2" type="Sprite2D" parent="GamesButtons/ButtonBuild" unique_id=1122375060]
+show_behind_parent = true
+position = Vector2(61.99994, 49.875)
+scale = Vector2(0.49335292, 0.43428183)
+texture = ExtResource("4_40hqr")
 
 [node name="ButtonChop" type="Button" parent="GamesButtons" unique_id=1052375046]
-modulate = Color(1, 1, 1, 0)
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_left = 65.0
-offset_top = 195.0
-offset_right = 258.0
-offset_bottom = 331.0
+offset_left = 892.0
+offset_top = 51.0
+offset_right = 1015.0
+offset_bottom = 154.0
+
+[node name="Sprite2D" type="Sprite2D" parent="GamesButtons/ButtonChop" unique_id=1269847269]
+texture_filter = 1
+position = Vector2(63.000008, 52.5)
+scale = Vector2(1.3698629, 1.7)
+texture = ExtResource("4_vc17c")
+
+[node name="Sprite2D2" type="Sprite2D" parent="GamesButtons/ButtonChop" unique_id=1271308190]
+show_behind_parent = true
+position = Vector2(61.99994, 49.875)
+scale = Vector2(0.49335292, 0.43428183)
+texture = ExtResource("4_40hqr")
 
 [node name="ButtonFish" type="Button" parent="GamesButtons" unique_id=520658193]
-modulate = Color(1, 1, 1, 0)
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_left = 919.0
-offset_top = 33.0
-offset_right = 1111.0
-offset_bottom = 169.0
+offset_left = 277.0
+offset_top = 473.0
+offset_right = 400.0
+offset_bottom = 578.0
+
+[node name="Sprite2D" type="Sprite2D" parent="GamesButtons/ButtonFish" unique_id=1164522847]
+texture_filter = 1
+position = Vector2(64, 54)
+scale = Vector2(1.6, 1.9)
+texture = ExtResource("5_40hqr")
+
+[node name="Sprite2D2" type="Sprite2D" parent="GamesButtons/ButtonFish" unique_id=1178959323]
+show_behind_parent = true
+position = Vector2(61.99994, 49.875)
+scale = Vector2(0.49335292, 0.43428183)
+texture = ExtResource("4_40hqr")
 
 [node name="ButtonRadio" type="Button" parent="GamesButtons" unique_id=1985024680]
+visible = false
 layout_mode = 0
 offset_left = 34.0
 offset_top = 617.0
 offset_right = 125.0
 offset_bottom = 689.0
+
+[node name="ButtonFireFly" type="Button" parent="GamesButtons" unique_id=1934406520]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 284.0
+offset_top = 25.0
+offset_right = 408.0
+offset_bottom = 126.0
+
+[node name="Sprite2D" type="Sprite2D" parent="GamesButtons/ButtonFireFly" unique_id=2033751889]
+texture_filter = 1
+position = Vector2(47.000015, 58)
+scale = Vector2(0.305, 0.305)
+texture = ExtResource("7_vc17c")
+
+[node name="Sprite2D2" type="Sprite2D" parent="GamesButtons/ButtonFireFly" unique_id=1260048058]
+show_behind_parent = true
+position = Vector2(61.99994, 49.875)
+scale = Vector2(0.49335292, 0.43428183)
+texture = ExtResource("4_40hqr")
 
 [node name="TaskList" type="Control" parent="." unique_id=1522179637]
 layout_mode = 3
@@ -66,11 +130,13 @@ text = "Lista De
 Afazeres"
 
 [node name="TaskPanel" type="Panel" parent="TaskList" unique_id=18143507]
+self_modulate = Color(1, 1, 1, 0)
+z_index = 1
 layout_mode = 0
-offset_left = -1112.0
-offset_top = 16.0
-offset_right = -17.0
-offset_bottom = 658.0
+offset_left = -995.0
+offset_top = 57.0
+offset_right = -102.0
+offset_bottom = 595.0
 
 [node name="MarginContainer" type="MarginContainer" parent="TaskList/TaskPanel" unique_id=1932351790]
 layout_mode = 0
@@ -81,17 +147,33 @@ theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
 [node name="VBoxContainer" type="VBoxContainer" parent="TaskList/TaskPanel/MarginContainer" unique_id=1656272879]
+modulate = Color(0.0018410678, 0.0018410682, 0.0018410678, 1)
 layout_mode = 2
+theme_override_constants/separation = 6
 
 [node name="DescriptionLabel" type="RichTextLabel" parent="TaskList/TaskPanel" unique_id=1580679585]
 layout_mode = 0
-offset_left = 576.0
+offset_left = 516.0
 offset_top = 3.0
-offset_right = 1094.0
-offset_bottom = 642.0
+offset_right = 895.0
+offset_bottom = 538.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+
+[node name="TextureRect" type="TextureRect" parent="TaskList/TaskPanel" unique_id=995786247]
+show_behind_parent = true
+texture_filter = 3
+layout_mode = 0
+offset_left = 969.0
+offset_top = 599.99994
+offset_right = 2015.5684
+offset_bottom = 1243.5942
+rotation = -3.1415927
+mouse_filter = 2
+texture = ExtResource("8_40hqr")
 
 [connection signal="pressed" from="GamesButtons/ButtonBuild" to="." method="_on_button_build_pressed"]
 [connection signal="pressed" from="GamesButtons/ButtonChop" to="." method="_on_button_chop_pressed"]
 [connection signal="pressed" from="GamesButtons/ButtonFish" to="." method="_on_button_fish_pressed"]
 [connection signal="pressed" from="GamesButtons/ButtonRadio" to="." method="_on_button_radio_pressed"]
+[connection signal="pressed" from="GamesButtons/ButtonFireFly" to="." method="_on_button_fire_fly_pressed"]
 [connection signal="pressed" from="TaskList/ListButton" to="." method="_on_list_button_pressed"]

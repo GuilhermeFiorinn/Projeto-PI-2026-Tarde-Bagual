@@ -1,37 +1,23 @@
 [gd_scene format=3 uid="uid://c6x06cfwfgrlg"]
 
-[ext_resource type="Script" uid="uid://b5gg13iu8s2g0" path="res://Scenes/MiniGames/fish_fishes.gd" id="1_qbcl0"]
-[ext_resource type="Texture2D" uid="uid://6emjdjj1x8kj" path="res://Sprites/Rio2.png" id="2_trque"]
-[ext_resource type="Texture2D" uid="uid://c7c5n4eetil57" path="res://VARAVARA.png" id="3_dvf4h"]
-[ext_resource type="Texture2D" uid="uid://bw0hfto3lj7qu" path="res://Sprites/aNZOL (1).png" id="4_otpj7"]
+[ext_resource type="Script" uid="uid://b5gg13iu8s2g0" path="res://Scripts/Pesca/fish_fishes.gd" id="1_qbcl0"]
+[ext_resource type="Texture2D" uid="uid://0mpa636ruw3t" path="res://Sprites/Enviroment/cenario pesca.png" id="2_trque"]
+[ext_resource type="Texture2D" uid="uid://crngqllvgag00" path="res://Sprites/Player/pescando1.png" id="3_il8it"]
+[ext_resource type="Texture2D" uid="uid://cptouogioek0m" path="res://Sprites/Finais/peixe 1.png" id="4_ce8a7"]
+[ext_resource type="Texture2D" uid="uid://c4orux43b56vy" path="res://Sprites/Finais/peixe 2.png" id="5_audgp"]
+[ext_resource type="Texture2D" uid="uid://bqsjqwc5uu1n4" path="res://Sprites/Finais/peixe 3.png" id="6_ul0rv"]
 
 [node name="FishFishes" type="Node2D" unique_id=75187565]
 script = ExtResource("1_qbcl0")
 
 [node name="FundoCenario" type="TextureRect" parent="." unique_id=1525460252]
+show_behind_parent = true
 texture_filter = 1
-offset_left = 7.0
-offset_top = -80.0
-offset_right = 1285.0
-offset_bottom = 1174.0
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 1281.0
+offset_bottom = 723.0
 texture = ExtResource("2_trque")
-
-[node name="VARAAPENAS" type="Sprite2D" parent="." unique_id=956132011]
-position = Vector2(726.00006, 293)
-rotation = -0.2617994
-scale = Vector2(0.6, 0.6)
-texture = ExtResource("3_dvf4h")
-
-[node name="Sprite1cena" type="Sprite2D" parent="." unique_id=1882886101]
-position = Vector2(661, 333)
-scale = Vector2(0.9999999, 0.9999999)
-texture = ExtResource("4_otpj7")
-
-[node name="Sprite2cena" type="Sprite2D" parent="." unique_id=74657824]
-position = Vector2(764.0001, 548.99994)
-rotation = -0.45727623
-scale = Vector2(1.5000001, 2.2)
-texture = ExtResource("4_otpj7")
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=1375380144]
 amount = 15
@@ -45,16 +31,41 @@ offset_top = 14.0
 offset_right = 936.0
 offset_bottom = 112.0
 
-[node name="ActionButton" type="Button" parent="." unique_id=1672660546]
+[node name="ButtonLeft" type="Button" parent="." unique_id=1672660546]
 offset_left = 38.0
 offset_top = 560.0
-offset_right = 325.0
+offset_right = 328.0
 offset_bottom = 688.0
+scale = Vector2(0.6400006, 1)
 
 [node name="FishingTimer" type="Timer" parent="." unique_id=342240417]
 
 [node name="QTE_Timer" type="Timer" parent="." unique_id=1169014037]
 
-[connection signal="pressed" from="ActionButton" to="." method="_on_action_button_pressed"]
+[node name="Player" type="Sprite2D" parent="." unique_id=1032253510]
+texture_filter = 1
+position = Vector2(666, 296)
+scale = Vector2(-3, 3)
+texture = ExtResource("3_il8it")
+
+[node name="Peixe1" type="Sprite2D" parent="." unique_id=687335075]
+texture_filter = 1
+position = Vector2(360, 593)
+scale = Vector2(2, 2)
+texture = ExtResource("4_ce8a7")
+
+[node name="Peixe2" type="Sprite2D" parent="." unique_id=1064392224]
+texture_filter = 1
+position = Vector2(603, 596)
+scale = Vector2(2, 2)
+texture = ExtResource("5_audgp")
+
+[node name="Peixe3" type="Sprite2D" parent="." unique_id=1545035429]
+texture_filter = 1
+position = Vector2(494, 653)
+scale = Vector2(2, 2)
+texture = ExtResource("6_ul0rv")
+
+[connection signal="pressed" from="ButtonLeft" to="." method="_on_action_button_pressed"]
 [connection signal="timeout" from="FishingTimer" to="." method="_on_fishing_timer_timeout"]
 [connection signal="timeout" from="QTE_Timer" to="." method="_on_qte_timer_timeout"]

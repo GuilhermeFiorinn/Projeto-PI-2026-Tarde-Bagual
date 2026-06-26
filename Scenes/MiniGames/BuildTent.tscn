@@ -1,10 +1,101 @@
 [gd_scene format=3 uid="uid://bqpiohik24kc8"]
 
-[ext_resource type="Texture2D" uid="uid://cjiqvdsr18ygt" path="res://Sprites/EmConstucao.png" id="1_ial7j"]
+[ext_resource type="Texture2D" uid="uid://cxa01ljpk8kw2" path="res://Sprites/Finais/barraca baixa opacidade.png" id="1_ial7j"]
+[ext_resource type="Script" uid="uid://bdfkp6o8xjn7h" path="res://Scenes/MiniGames/BuildTent.gd" id="1_t3fs7"]
+[ext_resource type="Texture2D" uid="uid://b6kbeeo1nm2tn" path="res://Sprites/Finais/barraca parte 2.png" id="2_0t7vc"]
+[ext_resource type="Texture2D" uid="uid://bkplyifgjtcrh" path="res://Sprites/Finais/barraca parte 3.png" id="3_t3fs7"]
+[ext_resource type="Texture2D" uid="uid://bfip06uvrwxt" path="res://Sprites/Finais/barraca parte 4.png" id="4_r1naq"]
+[ext_resource type="Texture2D" uid="uid://cjtw7aqqomeyq" path="res://Sprites/Finais/barraca parte 1.png" id="5_siub0"]
+[ext_resource type="Texture2D" uid="uid://cu8s7dau7gopd" path="res://Sprites/Enviroment/FundoMontar.png" id="7_r1naq"]
+[ext_resource type="PackedScene" uid="uid://n3sl00r32gbc" path="res://Scenes/Uis/ScoreUI.tscn" id="8_siub0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t3fs7"]
+size = Vector2(132, 135)
 
 [node name="BuildTent" type="Node2D" unique_id=1972162336]
+script = ExtResource("1_t3fs7")
+meta_acertos = 4
+limite_erros = 2
 
-[node name="EmConstucao" type="Sprite2D" parent="." unique_id=1926490342]
-position = Vector2(640.74994, 361.06253)
-scale = Vector2(0.46602476, 0.53224325)
+[node name="BarracaBaixaOpacidade" type="Sprite2D" parent="." unique_id=322178123]
+texture_filter = 1
+position = Vector2(368, 360)
+scale = Vector2(10, 10)
 texture = ExtResource("1_ial7j")
+
+[node name="ZonasSnap" type="Node2D" parent="." unique_id=716395036]
+position = Vector2(-47, 5)
+
+[node name="Parte1" type="Marker2D" parent="ZonasSnap" unique_id=2350100]
+position = Vector2(476, 392)
+
+[node name="Parte2" type="Marker2D" parent="ZonasSnap" unique_id=33369315]
+position = Vector2(342, 503)
+
+[node name="Parte3" type="Marker2D" parent="ZonasSnap" unique_id=378115040]
+position = Vector2(241, 447)
+
+[node name="Parte4" type="Marker2D" parent="ZonasSnap" unique_id=1728853989]
+position = Vector2(551, 179)
+
+[node name="Pecas" type="Node2D" parent="." unique_id=360241670]
+position = Vector2(555, 25)
+
+[node name="Parte1" type="Area2D" parent="Pecas" unique_id=1430535432]
+position = Vector2(365, 103)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pecas/Parte1" unique_id=750407935]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_t3fs7")
+
+[node name="Sprite2D" type="Sprite2D" parent="Pecas/Parte1" unique_id=1623781630]
+texture_filter = 1
+position = Vector2(-21, -7)
+scale = Vector2(3.2, 3.2)
+texture = ExtResource("5_siub0")
+
+[node name="Parte2" type="Area2D" parent="Pecas" unique_id=1484345973]
+position = Vector2(571, 533)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pecas/Parte2" unique_id=1131376510]
+shape = SubResource("RectangleShape2D_t3fs7")
+
+[node name="Sprite2D" type="Sprite2D" parent="Pecas/Parte2" unique_id=1180591531]
+texture_filter = 1
+position = Vector2(31.999998, -15.999999)
+scale = Vector2(3.4, 3.4)
+texture = ExtResource("2_0t7vc")
+
+[node name="Parte3" type="Area2D" parent="Pecas" unique_id=982130992]
+position = Vector2(554, 210)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pecas/Parte3" unique_id=1809873859]
+shape = SubResource("RectangleShape2D_t3fs7")
+
+[node name="Sprite2D" type="Sprite2D" parent="Pecas/Parte3" unique_id=919569302]
+texture_filter = 1
+position = Vector2(67, -31)
+scale = Vector2(4, 4)
+texture = ExtResource("3_t3fs7")
+
+[node name="Parte4" type="Area2D" parent="Pecas" unique_id=804196439]
+position = Vector2(380, 381)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pecas/Parte4" unique_id=1878052958]
+shape = SubResource("RectangleShape2D_t3fs7")
+
+[node name="Sprite2D" type="Sprite2D" parent="Pecas/Parte4" unique_id=1019419946]
+texture_filter = 1
+position = Vector2(-83, 104)
+scale = Vector2(6, 6)
+texture = ExtResource("4_r1naq")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1998315954]
+show_behind_parent = true
+offset_left = -3.0
+offset_top = -3.0
+offset_right = 1283.0
+offset_bottom = 721.0
+texture = ExtResource("7_r1naq")
+
+[node name="ScoreUI" parent="." unique_id=1148181781 instance=ExtResource("8_siub0")]

@@ -1,11 +1,13 @@
 [gd_scene format=3 uid="uid://brx7rj1kf7fl5"]
 
-[ext_resource type="Texture2D" uid="uid://bvusoy6t0yr8c" path="res://Sprites/Minigames/ChopWood/background.webp" id="1_1lehc"]
-[ext_resource type="Texture2D" uid="uid://ctdqv1rp4tasm" path="res://Sprites/Minigames/ChopWood/pixil-frame-0(1).png" id="2_g4a16"]
-[ext_resource type="Texture2D" uid="uid://bkd62su0mhgrh" path="res://Sprites/Minigames/ChopWood/wood.png" id="2_kfo36"]
+[ext_resource type="Script" uid="uid://qxh0bq1fd8sj" path="res://Scenes/MiniGames/chop_wood.gd" id="1_72yig"]
+[ext_resource type="Texture2D" uid="uid://b6mgmew52a0iv" path="res://Sprites/Enviroment/dia floresta.png" id="1_ou4bp"]
+[ext_resource type="Texture2D" uid="uid://ctdqv1rp4tasm" path="res://Sprites/MiniGames/ChopWood/pixil-frame-0(1).png" id="2_g4a16"]
 [ext_resource type="PackedScene" uid="uid://cuvcdn6705m0p" path="res://Scenes/MiniGames/ChopWood/Axe.tscn" id="3_f07gh"]
-[ext_resource type="Texture2D" uid="uid://dnhvisvow4tkp" path="res://Sprites/Minigames/ChopWood/wood_broken.png" id="3_g4a16"]
-[ext_resource type="Texture2D" uid="uid://bjl2r85gupti2" path="res://Sprites/Minigames/ChopWood/pixilart-drawing(2).png" id="4_ou4bp"]
+[ext_resource type="Texture2D" uid="uid://dnhvisvow4tkp" path="res://Sprites/MiniGames/ChopWood/wood_broken.png" id="3_g4a16"]
+[ext_resource type="Texture2D" uid="uid://bjl2r85gupti2" path="res://Sprites/MiniGames/ChopWood/pixilart-drawing(2).png" id="4_ou4bp"]
+[ext_resource type="Texture2D" uid="uid://cnu1660ejomsf" path="res://Sprites/Finais/madeira para cortar.png" id="5_ou4bp"]
+[ext_resource type="PackedScene" uid="uid://n3sl00r32gbc" path="res://Scenes/Uis/ScoreUI.tscn" id="7_g63wx"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_cphh5"]
 animations = [{
@@ -25,7 +27,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_kfo36")
+"texture": ExtResource("5_ou4bp")
 }],
 "loop": true,
 "name": &"default",
@@ -33,31 +35,32 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cmcnd"]
-size = Vector2(97.857414, 35.5)
+size = Vector2(97.857414, 41.97097)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ou4bp"]
 
 [node name="ChopWood" type="Node2D" unique_id=590010203]
+script = ExtResource("1_72yig")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=342407149]
-position = Vector2(639.99994, 360)
-scale = Vector2(1.5999999, 1.5720522)
-texture = ExtResource("1_1lehc")
+texture_filter = 1
+position = Vector2(641, 360.49997)
+scale = Vector2(10.224001, 7.5894732)
+texture = ExtResource("1_ou4bp")
 
 [node name="Wood" type="CharacterBody2D" parent="." unique_id=1654308723]
-position = Vector2(629, 463.00003)
+position = Vector2(631, 546)
 scale = Vector2(2, 2)
 
 [node name="Animation" type="AnimatedSprite2D" parent="Wood" unique_id=539805386]
 texture_filter = 1
-scale = Vector2(8, 8)
+scale = Vector2(3.5, 3.5)
 sprite_frames = SubResource("SpriteFrames_cphh5")
-animation = &"choping"
 autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Wood" unique_id=693913118]
-position = Vector2(0, 3.5)
-scale = Vector2(2, 2)
+position = Vector2(11, 10.000015)
+scale = Vector2(0.26000002, 2.0132961)
 shape = SubResource("RectangleShape2D_cmcnd")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Wood" unique_id=1513119632]
@@ -65,5 +68,7 @@ sprite_frames = SubResource("SpriteFrames_ou4bp")
 
 [node name="Axe" parent="." unique_id=1458561899 instance=ExtResource("3_f07gh")]
 position = Vector2(100, 100)
+
+[node name="ScoreUI" parent="." unique_id=1148181781 instance=ExtResource("7_g63wx")]
 
 [connection signal="animation_finished" from="Wood/Animation" to="Axe" method="_on_madera_animation_finished"]

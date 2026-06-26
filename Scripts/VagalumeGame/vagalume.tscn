@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://b6becp6ncsmv5"]
+
+[ext_resource type="Script" uid="uid://bjlekg28q07m2" path="res://Scripts/VagalumeGame/vagalume.gd" id="1_4a5kf"]
+[ext_resource type="Texture2D" uid="uid://cmmuj1ey0nvte" path="res://Sprites/Finais/vagalume.png" id="1_8wk6j"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bpfrj"]
+radius = 22.022715
+
+[node name="Vagalume" type="Node2D" unique_id=704048690]
+script = ExtResource("1_4a5kf")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=74864757]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=7798021]
+position = Vector2(3, 3)
+shape = SubResource("CircleShape2D_bpfrj")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=1074356770]
+texture_filter = 1
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("1_8wk6j")
+
+[node name="TimerSumir" type="Timer" parent="Area2D" unique_id=191513473]

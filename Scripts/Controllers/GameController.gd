@@ -18,12 +18,12 @@ var task_list = {
 	},
 	"fish": {
 		"title": "Pescar peixes",
-		"description": "Vá até o pier no lago e psque alguns peixes para comer.",
+		"description": "Vá até o pier no lago e pesque alguns peixes para comer.",
 		"completed": false
 	},
-	"tune_the_radio": {
-		"title":"Ajustar música no rádio",
-		"description": "Ligue o radio e escolho sua estação, ou deixe desligado.",
+	"catch_fireflies": {
+		"title":"Pegar vagalumes",
+		"description": "Pegar alguns vagalumes na floresta escura, para levar para meu neto.",
 		"completed": false
 	}
 }
@@ -31,7 +31,7 @@ var mini_games_path = {
 	"build_tent": "res://Scenes/MiniGames/BuildTent.tscn",
 	"fish":"res://Scenes/MiniGames/FishFishes.tscn",
 	"chop_wood":"res://Scenes/MiniGames/ChopWood.tscn",
-	"tune_the_radio":"res://Scenes/MiniGames/TuneRadio.tscn",
+	"catch_fireflies":"res://Scenes/MiniGames/CatchFireflies.tscn",
 }
 
 func _ready() -> void:
@@ -59,7 +59,7 @@ func _input(event):
 				task_list["fish"]["completed"] = not task_list["fish"]["completed"]
 				changed = true
 			KEY_4:
-				task_list["tune_the_radio"]["completed"] = not task_list["tune_the_radio"]["completed"]
+				task_list["catch_fireflies"]["completed"] = not task_list["catch_fireflies"]["completed"]
 				changed = true
 		if changed:
 			task_status_updated.emit()

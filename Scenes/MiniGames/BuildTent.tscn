@@ -17,7 +17,7 @@ script = ExtResource("1_t3fs7")
 meta_acertos = 4
 limite_erros = 2
 
-[node name="BarracaBaixaOpacidade" type="Sprite2D" parent="." unique_id=322178123]
+[node name="BarracaSilueta" type="Sprite2D" parent="." unique_id=322178123]
 texture_filter = 1
 position = Vector2(368, 360)
 scale = Vector2(10, 10)

@@ -15,6 +15,7 @@ var last_speed = speed
 
 @onready var george_wachington: CharacterBody2D = $"../Wood"
 @onready var minigame_raiz = $".." # Pega o nó raiz ChopWood
+@onready var faixa: Control = $"../Faixa" # NOVO: Pega a referência da Faixa na árvore de nós
 
 func _physics_process(delta: float) -> void:
 	# Se o jogo acabou, o machado para imediatamente
@@ -30,9 +31,9 @@ func _physics_process(delta: float) -> void:
 	if (direction == -1 and position.x <= 100) or (direction == 1 and position.x >= 1180):
 		direction = direction * -1
 	
+	# Mantido o ui_accept (barra de espaço) por segurança aqui dentro
 	if Input.is_action_just_pressed("ui_accept"):
-		inUse = true
-		velocity.y = AXE_SPEED
+		disparar_machado()
 	
 	move_and_slide()
 	
@@ -45,6 +46,10 @@ func _physics_process(delta: float) -> void:
 		if minigame_raiz and minigame_raiz.has_method("registrar_acerto"):
 			minigame_raiz.registrar_acerto()
 		
+		# NOVO: Faz a faixa sumir quando acerta e inicia a animação
+		if faixa:
+			faixa.visible = false
+		
 		george_wachington.get_node("Animation").play('choping')
 	
 	# SE PASSAR DIRETO: Errou a lenha!
@@ -52,10 +57,30 @@ func _physics_process(delta: float) -> void:
 		position = START_POSITION
 		inUse = false
 		velocity.y = 0
-		speed = START_SPEED
+		
+		# CORREÇÃO ANTERIOR: Mantém a velocidade em vez de resetar para o inicial
+		speed = last_speed
 		
 		if minigame_raiz and minigame_raiz.has_method("registrar_erro"):
 			minigame_raiz.registrar_erro()
+			
+		# Garante que a faixa continue visível para a próxima tentativa após o erro
+		if faixa:
+			faixa.visible = true
+
+# NOVO: Captura o clique em qualquer lugar da tela (Simula o botão invisível por cima de tudo)
+func _input(event: InputEvent) -> void:
+	if minigame_raiz and minigame_raiz.jogo_finalizado: return
+	
+	# Se o jogador tocar na tela ou clicar com o mouse enquanto o machado estiver parado no topo
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+		disparar_machado()
+
+# NOVO: Função isolada para evitar repetição de código
+func disparar_machado() -> void:
+	if not inUse:
+		inUse = true
+		velocity.y = AXE_SPEED
 
 func _on_madera_animation_finished() -> void:
 	if minigame_raiz and minigame_raiz.jogo_finalizado: return
@@ -63,3 +88,7 @@ func _on_madera_animation_finished() -> void:
 	position = START_POSITION
 	speed = last_speed + SPEED_GROWTH
 	george_wachington.get_node("Animation").play('default')
+	
+	# NOVO: Faz a faixa reaparecer quando a animação termina e o jogo reseta para a próxima tentativa
+	if faixa:
+		faixa.visible = true

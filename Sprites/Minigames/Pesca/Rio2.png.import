@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://6emjdjj1x8kj"
-path="res://.godot/imported/Rio2.png-0d764a262647106bc47d4b517cf2e632.ctex"
+path="res://.godot/imported/Rio2.png-c529c57445c5616ee97bd289690a669a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Minigames/Pesca/Rio2.png"
-dest_files=["res://.godot/imported/Rio2.png-0d764a262647106bc47d4b517cf2e632.ctex"]
+source_file="res://Sprites/MiniGames/Pesca/Rio2.png"
+dest_files=["res://.godot/imported/Rio2.png-c529c57445c5616ee97bd289690a669a.ctex"]
 
 [params]
 

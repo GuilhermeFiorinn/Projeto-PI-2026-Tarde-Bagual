@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bkd62su0mhgrh"
-path="res://.godot/imported/wood.png-4da27f782c0d9b531b3d7c56102417ac.ctex"
+path="res://.godot/imported/wood.png-7a14228123d2ddf4cf93fe6dbf35b6e9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Minigames/ChopWood/wood.png"
-dest_files=["res://.godot/imported/wood.png-4da27f782c0d9b531b3d7c56102417ac.ctex"]
+source_file="res://Sprites/MiniGames/ChopWood/wood.png"
+dest_files=["res://.godot/imported/wood.png-7a14228123d2ddf4cf93fe6dbf35b6e9.ctex"]
 
 [params]
 

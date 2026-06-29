@@ -2,6 +2,7 @@ extends MiniGameBase # AGORA HERDA A BASE MODULAR!
 
 @onready var pecas_container = $Pecas
 @onready var zonas_snap = $ZonasSnap
+@onready var barraca_silueta: Sprite2D = $"BarracaSilueta" # NOVO: Pega a referência da silueta da barraca transparente/opaca
 
 var peca_selecionada: Node2D = null
 var offset_mouse: Vector2 = Vector2.ZERO
@@ -64,5 +65,16 @@ func ganhou_minijogo() -> void:
 	if GameController.has_method("complete_task"):
 		GameController.complete_task("build_tent")
 	
-	# Chama a função original da base para tocar som, travar e voltar pro menu
+	# NOVO: Esconde o container de todas as peças arrastáveis
+	if pecas_container:
+		pecas_container.visible = false
+		
+	# NOVO: Altera o sprite da silueta transparente para a textura da barraca montada e finalizada
+	if barraca_silueta:
+		barraca_silueta.texture = load("res://Sprites/Icones/barraca.png")
+		# Se a sua silueta antiga usava opacidade baixa (modulate transparente), 
+		# a linha abaixo redefine para a cor normal (totalmente opaca)
+		barraca_silueta.modulate = Color(1, 1, 1, 1) 
+	
+	# Chama a função original da base para tocar som, travar e mostrar a UI de pontos
 	super.ganhou_minijogo()

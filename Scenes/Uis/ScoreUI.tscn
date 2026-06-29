@@ -2,6 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://cn4ghkgrh0j37" path="res://Sprites/Icones/Placa.png" id="1_kqeqg"]
 [ext_resource type="AudioStream" uid="uid://cfhu7fw1kwdvc" path="res://Audios/Songs/acerto.ogg" id="2_kwx6m"]
+[ext_resource type="AudioStream" uid="uid://dnbsby1jwrhqd" path="res://Audios/Songs/erro2.ogg" id="2_ncq2e"]
+[ext_resource type="Texture2D" uid="uid://dt7al544s2a3p" path="res://Sprites/Icones/setaVoltar.png" id="3_if47b"]
 
 [node name="ScoreUI" type="Control" unique_id=1148181781]
 top_level = true
@@ -28,12 +30,32 @@ layout_mode = 2
 [node name="LabelErros" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1959935919]
 layout_mode = 2
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1994672771]
-show_behind_parent = true
-texture_filter = 1
-position = Vector2(1155.25, 22)
-scale = Vector2(0.59601176, 0.36585367)
-texture = ExtResource("1_kqeqg")
-
 [node name="SomVitoria" type="AudioStreamPlayer2D" parent="." unique_id=1660098856]
 stream = ExtResource("2_kwx6m")
+
+[node name="SomErro" type="AudioStreamPlayer2D" parent="." unique_id=1624677017]
+stream = ExtResource("2_ncq2e")
+volume_db = 3.5
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=342615512]
+show_behind_parent = true
+texture_filter = 1
+position = Vector2(1164.5, 22.000004)
+scale = Vector2(0.67208266, 0.3631436)
+texture = ExtResource("1_kqeqg")
+
+[node name="BotaoVoltar" type="Button" parent="." unique_id=1407136601]
+self_modulate = Color(1, 1, 1, 0)
+z_index = 1
+texture_filter = 1
+layout_mode = 0
+offset_left = 22.0
+offset_top = 14.0
+offset_right = 134.0
+offset_bottom = 78.0
+
+[node name="SetaVoltar" type="Sprite2D" parent="BotaoVoltar" unique_id=134760135]
+texture_filter = 1
+position = Vector2(56.000008, 31)
+scale = Vector2(0.21, 0.21)
+texture = ExtResource("3_if47b")

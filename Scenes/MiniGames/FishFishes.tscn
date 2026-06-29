@@ -6,9 +6,13 @@
 [ext_resource type="Texture2D" uid="uid://cptouogioek0m" path="res://Sprites/Finais/peixe 1.png" id="4_ce8a7"]
 [ext_resource type="Texture2D" uid="uid://c4orux43b56vy" path="res://Sprites/Finais/peixe 2.png" id="5_audgp"]
 [ext_resource type="Texture2D" uid="uid://bqsjqwc5uu1n4" path="res://Sprites/Finais/peixe 3.png" id="6_ul0rv"]
+[ext_resource type="PackedScene" uid="uid://n3sl00r32gbc" path="res://Scenes/Uis/ScoreUI.tscn" id="7_audgp"]
 
 [node name="FishFishes" type="Node2D" unique_id=75187565]
 script = ExtResource("1_qbcl0")
+
+[node name="ScoreUI" parent="." unique_id=1148181781 instance=ExtResource("7_audgp")]
+visible = false
 
 [node name="FundoCenario" type="TextureRect" parent="." unique_id=1525460252]
 show_behind_parent = true

@@ -20,15 +20,15 @@ texture = ExtResource("1_aa8yl")
 [node name="MarcadoresSpawn" type="Node2D" parent="." unique_id=1735607856]
 
 [node name="Pos1" type="Marker2D" parent="MarcadoresSpawn" unique_id=741116076]
-position = Vector2(222, 581)
+position = Vector2(350, 473)
 
 [node name="Pos2" type="Marker2D" parent="MarcadoresSpawn" unique_id=1820948750]
-position = Vector2(486, 213)
+position = Vector2(507, 242)
 
 [node name="Pos3" type="Marker2D" parent="MarcadoresSpawn" unique_id=1249508485]
-position = Vector2(841, 557)
+position = Vector2(725, 488)
 
 [node name="Pos4" type="Marker2D" parent="MarcadoresSpawn" unique_id=1986460314]
-position = Vector2(863, 243)
+position = Vector2(884, 245)
 
 [node name="ScoreUI" parent="." unique_id=1148181781 instance=ExtResource("3_ct6sw")]

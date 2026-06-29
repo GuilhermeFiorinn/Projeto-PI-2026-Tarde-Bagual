@@ -1,13 +1,16 @@
 [gd_scene format=3 uid="uid://7kb61jm2kwex"]
 
 [ext_resource type="Script" uid="uid://bltxiyl7qk04g" path="res://Scripts/Home.gd" id="1_bf2t8"]
-[ext_resource type="Texture2D" uid="uid://c26m7eu3l5p7a" path="res://Sprites/Enviroment/mapa.png" id="2_bf2t8"]
+[ext_resource type="Texture2D" uid="uid://caevmwbulfrk5" path="res://Sprites/Enviroment/mapa-novo.png" id="2_drcej"]
 [ext_resource type="Texture2D" uid="uid://deg2pkrqkwb1g" path="res://Sprites/Icones/barraca.png" id="3_bayy0"]
 [ext_resource type="Texture2D" uid="uid://cn4ghkgrh0j37" path="res://Sprites/Icones/Placa.png" id="4_40hqr"]
 [ext_resource type="Texture2D" uid="uid://bnrko25ka8i1" path="res://Sprites/Icones/icon cortar lenha.png" id="4_vc17c"]
 [ext_resource type="Texture2D" uid="uid://dhbg651t5d8ix" path="res://Sprites/Icones/icone pesca.png" id="5_40hqr"]
 [ext_resource type="Texture2D" uid="uid://bs7mtkbjdx3cc" path="res://Sprites/Icones/IconeVagalume.png" id="7_vc17c"]
 [ext_resource type="Texture2D" uid="uid://bq5rjg1vgrd31" path="res://Sprites/Enviroment/Caderno.png" id="8_40hqr"]
+[ext_resource type="Texture2D" uid="uid://cbbnxeo3hv0ry" path="res://Sprites/Icones/ListaTexto.png" id="8_drcej"]
+[ext_resource type="Texture2D" uid="uid://3k474ov3ets5" path="res://Sprites/Icones/Parabens.png" id="10_vtqrm"]
+[ext_resource type="Texture2D" uid="uid://dst53vqtq0ed6" path="res://Sprites/Player/idosovelho.png" id="11_smdvn"]
 
 [node name="HomeView" type="Node2D" unique_id=1859728771]
 script = ExtResource("1_bf2t8")
@@ -15,9 +18,9 @@ script = ExtResource("1_bf2t8")
 [node name="Background" type="Sprite2D" parent="." unique_id=2114399040]
 show_behind_parent = true
 texture_filter = 1
-position = Vector2(640.5, 360.49997)
-scale = Vector2(10.296, 7.631579)
-texture = ExtResource("2_bf2t8")
+position = Vector2(643.49994, 360.49997)
+scale = Vector2(10.343999, 7.631579)
+texture = ExtResource("2_drcej")
 
 [node name="GamesButtons" type="Control" parent="." unique_id=207267753]
 top_level = true
@@ -49,10 +52,10 @@ texture = ExtResource("4_40hqr")
 [node name="ButtonChop" type="Button" parent="GamesButtons" unique_id=1052375046]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_left = 892.0
-offset_top = 51.0
-offset_right = 1015.0
-offset_bottom = 154.0
+offset_left = 934.0
+offset_top = 74.0
+offset_right = 1057.0
+offset_bottom = 177.0
 
 [node name="Sprite2D" type="Sprite2D" parent="GamesButtons/ButtonChop" unique_id=1269847269]
 texture_filter = 1
@@ -69,10 +72,10 @@ texture = ExtResource("4_40hqr")
 [node name="ButtonFish" type="Button" parent="GamesButtons" unique_id=520658193]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_left = 277.0
-offset_top = 473.0
-offset_right = 400.0
-offset_bottom = 578.0
+offset_left = 321.0
+offset_top = 460.0
+offset_right = 444.0
+offset_bottom = 565.0
 
 [node name="Sprite2D" type="Sprite2D" parent="GamesButtons/ButtonFish" unique_id=1164522847]
 texture_filter = 1
@@ -97,10 +100,10 @@ offset_bottom = 689.0
 [node name="ButtonFireFly" type="Button" parent="GamesButtons" unique_id=1934406520]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_left = 284.0
-offset_top = 25.0
-offset_right = 408.0
-offset_bottom = 126.0
+offset_left = 236.0
+offset_top = 32.0
+offset_right = 360.0
+offset_bottom = 133.0
 
 [node name="Sprite2D" type="Sprite2D" parent="GamesButtons/ButtonFireFly" unique_id=2033751889]
 texture_filter = 1
@@ -123,11 +126,18 @@ offset_right = 1240.0
 offset_bottom = 58.0
 
 [node name="ListButton" type="Button" parent="TaskList" unique_id=1236843635]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_right = 75.0
-offset_bottom = 54.0
-text = "Lista De 
-Afazeres"
+offset_left = -37.0
+offset_top = -4.0
+offset_right = 69.0
+offset_bottom = 66.0
+
+[node name="Sprite2D" type="Sprite2D" parent="TaskList/ListButton" unique_id=216073517]
+texture_filter = 1
+position = Vector2(53.5, 27.999996)
+scale = Vector2(0.21363634, 0.3756613)
+texture = ExtResource("8_drcej")
 
 [node name="TaskPanel" type="Panel" parent="TaskList" unique_id=18143507]
 self_modulate = Color(1, 1, 1, 0)
@@ -170,6 +180,16 @@ offset_bottom = 1243.5942
 rotation = -3.1415927
 mouse_filter = 2
 texture = ExtResource("8_40hqr")
+
+[node name="Final" type="Sprite2D" parent="." unique_id=635080518]
+position = Vector2(659, 340)
+texture = ExtResource("10_vtqrm")
+
+[node name="Idosovelho" type="Sprite2D" parent="." unique_id=1899606233]
+texture_filter = 1
+position = Vector2(679, 296)
+scale = Vector2(1.61, 1.61)
+texture = ExtResource("11_smdvn")
 
 [connection signal="pressed" from="GamesButtons/ButtonBuild" to="." method="_on_button_build_pressed"]
 [connection signal="pressed" from="GamesButtons/ButtonChop" to="." method="_on_button_chop_pressed"]

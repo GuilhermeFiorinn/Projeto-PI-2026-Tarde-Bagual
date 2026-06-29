@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://biu07wgcgovwa"]
 
 [ext_resource type="Script" uid="uid://c74y3rb45ww7" path="res://Scripts/MainMenu.gd" id="1_3kf3n"]
+[ext_resource type="Texture2D" uid="uid://6xtcg3n8evss" path="res://Sprites/Finais/finais2/magnific_crie-uma-arte-em-pixel-ar_YV961QHWeC.png" id="2_8sopf"]
+[ext_resource type="Texture2D" uid="uid://cat5x1ah2dvj1" path="res://Sprites/Finais/finais2/começar.png" id="2_thvk0"]
+[ext_resource type="Texture2D" uid="uid://c0gxv4yaor222" path="res://Sprites/Icones/sair.png" id="3_nomkq"]
 
 [node name="Menu" type="Node2D" unique_id=425219476]
 script = ExtResource("1_3kf3n")
@@ -14,43 +17,40 @@ offset_right = 104.0
 offset_bottom = 130.0
 
 [node name="PlayButton" type="Button" parent="ButtonManager" unique_id=1618811542]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_left = 405.00003
-offset_top = 214.00003
-offset_right = 545.0
-offset_bottom = 245.00003
+offset_left = 388.0
+offset_top = 214.99997
+offset_right = 544.0
+offset_bottom = 255.0
 scale = Vector2(2.5, 2.5)
-text = "Play"
+
+[node name="Sprite2D" type="Sprite2D" parent="ButtonManager/PlayButton" unique_id=1277524545]
+position = Vector2(78.399994, 22.800003)
+scale = Vector2(0.07999999, 0.07999999)
+texture = ExtResource("2_thvk0")
 
 [node name="QuitButton" type="Button" parent="ButtonManager" unique_id=634979749]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_left = 406.0
-offset_top = 397.0
-offset_right = 546.0
-offset_bottom = 428.0
+offset_left = 384.0
+offset_top = 372.0
+offset_right = 542.0
+offset_bottom = 412.39996
 scale = Vector2(2.5, 2.5)
 text = "Quit
 "
 
-[node name="Label" type="Label" parent="." unique_id=260051254]
-top_level = true
-offset_left = 342.0
-offset_top = 65.0
-offset_right = 975.0
-offset_bottom = 202.0
-theme_override_font_sizes/font_size = 100
-text = "Tarde Bagual"
-horizontal_alignment = 1
-vertical_alignment = 1
+[node name="Sprite2D" type="Sprite2D" parent="ButtonManager/QuitButton" unique_id=1796264829]
+position = Vector2(79.600006, 18.800018)
+scale = Vector2(0.30666667, 0.28888887)
+texture = ExtResource("3_nomkq")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=992834287]
-modulate = Color(0.2604962, 0.40578845, 0.18412778, 1)
+[node name="Fundo" type="Sprite2D" parent="." unique_id=448279957]
 show_behind_parent = true
-offset_left = -14.0
-offset_top = -10.0
-offset_right = 1293.0
-offset_bottom = 734.0
-mouse_filter = 2
+position = Vector2(641.49994, 341.5)
+scale = Vector2(0.50432396, 0.5185439)
+texture = ExtResource("2_8sopf")
 
 [connection signal="pressed" from="ButtonManager/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="ButtonManager/QuitButton" to="." method="_on_quit_button_pressed"]

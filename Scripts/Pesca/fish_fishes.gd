@@ -185,11 +185,11 @@ func proximo_peixe():
 		botao.text = "PESCAR PRÓXIMO"
 		botao.disabled = false
 
+# 🟢 MODIFICADA: Agora sai automaticamente sem depender do botão!
 func ganhou_tudo():
 	estado_atual = State.FIM_DO_JOGO
 	atualizar_texto_status("Parabéns! Você pescou todos os peixes!")
-	if botao and "text" in botao:
-		botao.text = "VOLTAR PARA A VILA"
-		botao.disabled = false
 	
-	GameController.task_list["fish"]["completed"] = true
+	# Desabilita o botão para evitar cliques indesejados durante a transição
+	if botao:
+		botao.text

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://1tue3xrg7oo6"
-path="res://.godot/imported/axe.png-d57bfcca860db1b9a2dc5a9bcfefe4a8.ctex"
+uid="uid://dvi15hnydpc20"
+path="res://.godot/imported/pescador_pescando.png-573878dea91d0d9f032f06662d296236.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Minigames/ChopWood/axe.png"
-dest_files=["res://.godot/imported/axe.png-d57bfcca860db1b9a2dc5a9bcfefe4a8.ctex"]
+source_file="res://Sprites/Player/pescador_pescando.png"
+dest_files=["res://.godot/imported/pescador_pescando.png-573878dea91d0d9f032f06662d296236.ctex"]
 
 [params]
 

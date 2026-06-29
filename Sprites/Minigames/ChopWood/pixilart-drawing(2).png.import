@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bjl2r85gupti2"
-path="res://.godot/imported/pixilart-drawing(2).png-8589745f39f4b374e6eec5c6a56ba2dd.ctex"
+path="res://.godot/imported/pixilart-drawing(2).png-4a0ea297e2c25ebca842b386ec879e28.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/MiniGames/ChopWood/pixilart-drawing(2).png"
-dest_files=["res://.godot/imported/pixilart-drawing(2).png-8589745f39f4b374e6eec5c6a56ba2dd.ctex"]
+source_file="res://Sprites/Minigames/ChopWood/pixilart-drawing(2).png"
+dest_files=["res://.godot/imported/pixilart-drawing(2).png-4a0ea297e2c25ebca842b386ec879e28.ctex"]
 
 [params]
 

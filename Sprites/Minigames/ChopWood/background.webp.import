@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bvusoy6t0yr8c"
-path="res://.godot/imported/background.webp-d55e8cc08578973df1d44eb63b773f72.ctex"
+path="res://.godot/imported/background.webp-5871920c14781447df6420f0a3527266.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/MiniGames/ChopWood/background.webp"
-dest_files=["res://.godot/imported/background.webp-d55e8cc08578973df1d44eb63b773f72.ctex"]
+source_file="res://Sprites/Minigames/ChopWood/background.webp"
+dest_files=["res://.godot/imported/background.webp-5871920c14781447df6420f0a3527266.ctex"]
 
 [params]
 
